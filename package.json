@@ -1,7 +1,6 @@
 {
-  "name": "passwordg",
+  "name": "paswordg",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "start": "vite",
@@ -16,5 +15,6 @@
     "autoprefixer": "^10.4.20",
     "postcss": "^8.5.1",
     "tailwindcss": "^3.4.17"
-  }
+  },
+  "description": ""
 }
