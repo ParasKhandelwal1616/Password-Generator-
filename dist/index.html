@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <script src="./index.js" defer></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-Ba9-Niz9.css">
+</head>
+<body class="flex items-center justify-center min-h-screen bg-[url('assets/passwordg.avif')] bg-cover bg-center text-white">
+    <div class=" w-[450px]  backdrop-blur-md  p-6 rounded-lg shadow-lg">
+        <h1 class="text-4xl font-bold text-center mb-4">Password Generator</h1>
+        <div class="flex items-center space-x-2 mb-4 text-2xl">
+            <input readonly type="text" id="password" placeholder="Password" class="flex-grow p-2 text-black rounded-md">
+            <button id="copyBtn" class="bg-blue-500 hover:bg-blue-600 text-white p-2 rounded-md ">
+                <span class="tooltip" data-copyMessage ></span>
+                📋
+            </button>
+        </div>
+        <div>
+            <div class="flex justify-between mb-2">
+                <p class=" text-2xl">Password Length</p>
+                <span data-lengthNumber class="font-bold text-2xl">10</span>
+            </div>
+            <input type="range" 
+            min="0" max="20" value="10" step="1" 
+            data-lengthRange
+            class="w-full h-5  rounded-lg  cursor-pointer accent-green-500">        </div>
+        <div class="mt-4 space-y-2 text-2xl">
+            <div class="flex items-center">
+                <input type="checkbox" id="uppercase" data-uppercase class="mr-2">
+                <label for="uppercase">Include Uppercase Letters</label>
+            </div>
+            <div class="flex items-center">
+                <input type="checkbox" id="lowercase" data-lowercase class="mr-2">
+                <label for="lowercase">Include Lowercase Letters</label>
+            </div>
+            <div class="flex items-center">
+                <input type="checkbox" id="numbers" data-numbers class="mr-2">
+                <label for="numbers">Include Numbers</label>
+            </div>
+            <div class="flex items-center">
+                <input type="checkbox" id="symbols" data-symbol class="mr-2">
+                <label for="symbols">Include Symbols</label>
+            </div>
+        </div>
+        <div class="flex justify-between items-center mt-4">
+            <p class="text-2xl">Strength</p>
+            <div class="w-7 h-7 rounded-full bg-red-500 shadow" data-indicator></div>
+        </div>
+        <button id="generateBtn" class="w-full bg-green-500 hover:bg-green-600 mt-4 p-2 rounded-md text-white font-bold text-2xl">
+            Generate Password
+        </button>
+    </div>
+</body>
+</html>
