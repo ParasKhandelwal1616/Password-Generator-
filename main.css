@@ -4,10 +4,10 @@
 
 .tooltip {
     position: absolute;
-    background-color:rgb(85, 218, 255);
+    background-color:rgb(148, 152, 153);
     color: white;
-    font-size:30px;
-    top: 3rem;
+    font-size:25px;
+    top: 2rem;
     right: -25px;
     padding: 5px 10px;
     border-radius: 1rem;

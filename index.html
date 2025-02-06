@@ -7,50 +7,54 @@
     <link rel="stylesheet" href="./main.css">
     <script src="./index.js" type="module" defer></script>
 </head>
-<body class="flex items-center justify-center min-h-screen bg-[url('assets/passwordg.avif')] bg-cover bg-center text-white">
-    <div class=" w-[450px]  backdrop-blur-md  p-6 rounded-lg shadow-lg">
-        <h1 class="text-4xl font-bold text-center mb-4">Password Generator</h1>
-        <div class="flex items-center space-x-2 mb-4 text-2xl">
-            <input readonly type="text" id="password" placeholder="Password" class="flex-grow p-2 text-black rounded-md">
-            <button id="copyBtn" class="bg-blue-500 hover:bg-blue-600 text-white p-2 rounded-md ">
-                <span class="tooltip" data-copyMessage ></span>
+<body>
+    <div class=" bg-gradient-to-r from-gray-500 via-gray-700 to-black  h-screen flex flex-col text-white items-center justify-center ">
+        <h1 class=" font-bold text-4xl pb-7">Password Generator</h1>
+        <div class=" flex flex-row items-center justify-center space-x-2 bg-black p-2 rounded-lg text-3xl mb-6 shadow-blue-100 h-16" >
+            <input readonly type="text" id="password" placeholder="Password" class="bg-transparent text-white pl-3 placeholder-white w-80">
+            <button id="copyBtn" class=" relative">
+                <span class="tooltip absolute -top-10  w-[100px]" data-copyMessage></span>
                 📋
             </button>
         </div>
-        <div>
-            <div class="flex justify-between mb-2">
-                <p class=" text-2xl">Password Length</p>
-                <span data-lengthNumber class="font-bold text-2xl">10</span>
+        <div class=" bg-black p-4 rounded-lg space-y-4 w-96 ">
+            <div>
+                <div class=" flex justify-between text-xl font-semibold">
+                    <p>Password Length</p>
+                    <span data-lengthNumber>10</span>
+                </div>
+                <input type="range" min="0" max="20" value="10" step="1" data-lengthRange class="w-full mt-4">       
             </div>
-            <input type="range" 
-            min="0" max="20" value="10" step="1" 
-            data-lengthRange
-            class="w-full h-5  rounded-lg  cursor-pointer accent-green-500">        </div>
-        <div class="mt-4 space-y-2 text-2xl">
-            <div class="flex items-center">
-                <input type="checkbox" id="uppercase" data-uppercase class="mr-2">
-                <label for="uppercase">Include Uppercase Letters</label>
+            <div class=" text-lg">
+                <div>
+                    <input class="accent-black " type="checkbox" id="uppercase" data-uppercase>
+                    <label for="uppercase">Include Uppercase Letters</label>
+                </div>
+                <div>
+                    <input class="accent-black " type="checkbox" id="lowercase" data-lowercase>
+                    <label for="lowercase">Include Lowercase Letters</label>
+                </div>
+                <div>
+                    <input class="accent-black " type="checkbox" id="numbers" data-numbers>
+                    <label for="numbers">Include Numbers</label>
+                </div>
+                <div>
+                    <input class="accent-black " type="checkbox" id="symbols" data-symbol>
+                    <label for="symbols">Include Symbols</label>
+                </div>
             </div>
-            <div class="flex items-center">
-                <input type="checkbox" id="lowercase" data-lowercase class="mr-2">
-                <label for="lowercase">Include Lowercase Letters</label>
-            </div>
-            <div class="flex items-center">
-                <input type="checkbox" id="numbers" data-numbers class="mr-2">
-                <label for="numbers">Include Numbers</label>
-            </div>
-            <div class="flex items-center">
-                <input type="checkbox" id="symbols" data-symbol class="mr-2">
-                <label for="symbols">Include Symbols</label>
-            </div>
+              <div class=" flex flex-row items-center justify-between font-semibold text-lg">
+                <p>Strength</p>
+                <div data-indicator class=" w-7 h-7 bg-red-700 rounded-full"></div>
+
+
+              </div>
+             <div class=" flex items-center justify-center "> <button class=" text-2xl bg-gradient-to-r from-gray-500 to-gray-700 rounded-lg h-14  w-full hover:scale-105 transition-all duration-200" id="generateBtn">Generate Password</button></div>
+
+            
         </div>
-        <div class="flex justify-between items-center mt-4">
-            <p class="text-2xl">Strength</p>
-            <div class="w-7 h-7 rounded-full bg-red-500 shadow" data-indicator></div>
+       
         </div>
-        <button id="generateBtn" class="w-full bg-green-500 hover:bg-green-600 mt-4 p-2 rounded-md text-white font-bold text-2xl">
-            Generate Password
-        </button>
-    </div>
+        
 </body>
 </html>
