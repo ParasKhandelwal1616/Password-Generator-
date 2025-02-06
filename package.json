@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "build": "vite build",
+     "set-permissions": "node set-permissions.js",
+     "build": "npm run set-permissions && vite build",
     "start": "vite"
   },
   "author": "",
